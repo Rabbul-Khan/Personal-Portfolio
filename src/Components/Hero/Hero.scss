@@ -1,0 +1,65 @@
+.hero {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  overflow: hidden;
+  position: relative;
+
+  &__grid-wrapper {
+    height: calc(
+      100vh - 100px
+    ); //Subtracting the height of navbar which is 100px
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 150px;
+
+    .hero__details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .hero__title {
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 10px;
+        color: rgb(164, 103, 224);
+      }
+
+      .hero__subtitle {
+        font-size: 80px;
+      }
+
+      .btn__wrapper {
+        display: flex;
+        gap: 10px;
+
+        .btn--outline {
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+          color: white;
+          cursor: pointer;
+          font-weight: 300;
+        }
+      }
+
+      .img--scroll {
+        width: 40px;
+      }
+    }
+    .img--avatar {
+      min-width: 300px;
+    }
+  }
+
+  .sliding-text-container {
+    position: absolute;
+    font-size: 40vh;
+    bottom: -20px;
+    white-space: nowrap;
+    color: #ffffff09;
+    //width: 80%;
+    font-weight: bold;
+  }
+}
