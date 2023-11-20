@@ -3,6 +3,7 @@ import Hero from './Components/Hero/Hero';
 
 import './App.scss';
 import Parallax from './Components/Parallax/Parallax';
+import Projects from './Components/Projects/Projects';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
       <section id="Projects">
         <Parallax type="projects" />
       </section>
+
+      <Projects />
 
       <section id="Contact">Contact</section>
     </>
