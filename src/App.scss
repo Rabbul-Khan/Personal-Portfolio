@@ -1,3 +1,10 @@
+:root {
+  --color-black: #0c0c1d;
+  --color-white: #f3f4f8;
+  --color-dark-blue: #111132;
+  --color-orange: #ffa500;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,11 +14,12 @@
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-}
 
-body {
-  background-color: #0c0c1d;
-  color: lightgray;
+  body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
 }
 
 section {

@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-
 import './links.scss';
+
+import { motion } from 'framer-motion';
 
 const variants = {
   open: {

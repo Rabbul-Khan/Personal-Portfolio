@@ -1,12 +1,21 @@
+import './Navbar.scss';
+
 import { motion } from 'framer-motion';
 
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from './Sidebar/Sidebar';
 
-import './Navbar.scss';
+const linkVariants = {
+  hover: {
+    scale: 1.1,
+  },
+  tap: {
+    scale: 0.95,
+  },
+};
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="navbar">
       <Sidebar />
       <div className="navbar-wrapper">
         <motion.span
@@ -17,15 +26,30 @@ const Navbar = () => {
           Mohammed Rabbul Hossain Khan
         </motion.span>
         <div className="navbar-wrapper__socials-wrapper">
-          <a href="#">
+          <motion.a
+            href="https://www.linkedin.com/in/mohammed-rabbul-hossain-khan-701651167/"
+            variants={linkVariants}
+            whileHover="hover"
+            whileTap="tap"
+          >
             <img src="./linkedin.png" alt="LinkedIn icon" />
-          </a>
-          <a href="#">
+          </motion.a>
+          <motion.a
+            href="https://github.com/Rabbul-Khan"
+            variants={linkVariants}
+            whileHover="hover"
+            whileTap="tap"
+          >
+            <img src="./github.svg" alt="GitHub icon" />
+          </motion.a>
+          <motion.a
+            href="https://www.facebook.com/rabbul.khan.39/"
+            variants={linkVariants}
+            whileHover="hover"
+            whileTap="tap"
+          >
             <img src="./facebook.png" alt="Facebook icon" />
-          </a>
-          <a href="#">
-            <img src="./instagram.png" alt="Instagram icon" />
-          </a>
+          </motion.a>
         </div>
       </div>
     </nav>

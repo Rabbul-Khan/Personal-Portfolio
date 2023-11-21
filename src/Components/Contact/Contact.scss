@@ -1,0 +1,93 @@
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 15rem;
+  max-width: 80%;
+  height: 100%;
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    letter-spacing: 0.1rem;
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0.25rem;
+      color: var(--color-orange);
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    max-width: 40%;
+    position: relative;
+
+    .phoneSvg {
+      stroke: var(--color-orange);
+      position: absolute;
+      display: flex;
+      z-index: -1; // To interact with form after SVG disappears
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      & > svg {
+        width: 100%;
+        max-width: 30rem;
+        height: auto;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+
+      input,
+      textarea {
+        padding: 1.25rem;
+        background-color: transparent;
+        border: 1px solid var(--color-white);
+        outline: none;
+        color: var(--color-white);
+        border-radius: 0.5rem;
+        resize: none;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        letter-spacing: 0.1rem;
+        transition: 0.4s;
+
+        &:focus {
+          border: 1px solid var(--color-orange);
+          transition: 0.4s;
+        }
+
+        &::placeholder {
+          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+      }
+      button {
+        padding: 1.25rem;
+        border: 1px solid var(--color-orange);
+        border-radius: 0.5rem;
+        background-color: transparent;
+        color: var(--color-orange);
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover {
+          color: var(--color-dark-blue);
+          background-color: var(--color-orange);
+          transition: 0.4s;
+        }
+      }
+    }
+  }
+}

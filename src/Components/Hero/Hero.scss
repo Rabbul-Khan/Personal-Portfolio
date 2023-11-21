@@ -1,7 +1,14 @@
+@import '../../App.scss';
+
 .hero {
-  background: linear-gradient(180deg, #0c0c1d, #111132);
-  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    var(--color-black),
+    var(--color-dark-blue)
+  );
+  overflow: hidden; // To hide scrollbar of sliding text
   position: relative;
+  user-select: none;
 
   &__grid-wrapper {
     height: calc(
@@ -11,45 +18,60 @@
     grid-template-columns: 2fr 1fr;
     align-items: center;
     justify-content: center;
-    margin: 0 150px;
+    margin: 0 20rem;
 
     .hero__details {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 1.75rem;
 
       .hero__title {
         text-transform: uppercase;
-        font-size: 20px;
-        letter-spacing: 10px;
-        color: rgb(164, 103, 224);
+        font-size: 1.5rem;
+        letter-spacing: 0.25rem;
+        color: var(--color-orange);
       }
 
       .hero__subtitle {
-        font-size: 80px;
+        font-size: 6rem;
+        letter-spacing: 0.15rem;
       }
 
       .btn__wrapper {
         display: flex;
-        gap: 10px;
+        gap: 1.75rem;
 
         .btn--outline {
-          padding: 20px;
-          border: 1px solid white;
-          border-radius: 10px;
+          padding: 1.25rem;
+          border: 1px solid var(--color-white);
+          border-radius: 0.5rem;
           background-color: transparent;
-          color: white;
+          color: var(--color-white);
+          font-weight: bold;
           cursor: pointer;
-          font-weight: 300;
+          z-index: 5;
+
+          &:hover {
+            border: 1px solid var(--color-orange);
+            color: var(--color-orange);
+          }
         }
       }
 
-      .img--scroll {
-        width: 40px;
+      .scroll-icon {
+        cursor: pointer;
+        z-index: 5;
+
+        &:hover {
+          & > path {
+            stroke: var(--color-orange);
+          }
+        }
       }
     }
+
     .img--avatar {
-      min-width: 300px;
+      min-width: 30rem;
     }
   }
 
@@ -59,7 +81,6 @@
     bottom: -20px;
     white-space: nowrap;
     color: #ffffff09;
-    //width: 80%;
     font-weight: bold;
   }
 }

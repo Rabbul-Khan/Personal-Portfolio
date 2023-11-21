@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-
 import './ToggleButton.scss';
+
+import { motion } from 'framer-motion';
 
 const ToggleButton = ({ setOpen }) => {
   return (
@@ -8,7 +8,7 @@ const ToggleButton = ({ setOpen }) => {
       <svg width="23" height="23" viewBox="0 0 23 23">
         <motion.path
           d="M 0 1 L 23 1"
-          stroke="#000"
+          stroke="#0c0c1d"
           strokeWidth={2}
           strokeLinecap="round"
           variants={{
@@ -17,7 +17,7 @@ const ToggleButton = ({ setOpen }) => {
         />
         <motion.path
           d="M 0 11 L 23 11"
-          stroke="#000"
+          stroke="#0c0c1d"
           strokeWidth={2}
           strokeLinecap="round"
           variants={{
@@ -26,7 +26,7 @@ const ToggleButton = ({ setOpen }) => {
         />
         <motion.path
           d="M 0 22 L 23 22"
-          stroke="#000"
+          stroke="#0c0c1d"
           strokeWidth={2}
           strokeLinecap="round"
           variants={{
