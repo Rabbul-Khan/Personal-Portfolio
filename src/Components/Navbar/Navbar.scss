@@ -1,7 +1,13 @@
+@import '../../App.scss';
+
 .navbar {
   height: 100px;
   margin: 0 8rem;
   user-select: none;
+
+  @include mobile {
+    margin: 0 1.75rem;
+  }
 
   &-wrapper {
     height: 100%;
@@ -9,9 +15,17 @@
     justify-content: space-between;
     align-items: center;
 
+    @include mobile {
+      justify-content: flex-end;
+    }
+
     span {
       font-weight: bold;
       letter-spacing: 0.15rem;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     &__socials-wrapper {

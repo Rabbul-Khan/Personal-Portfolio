@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .projects {
   position: relative;
 
@@ -9,8 +11,24 @@
     text-align: center;
     color: var(--color-orange);
 
+    @include tablet {
+      padding-top: calc(100vh - 150px);
+    }
+
+    @include mobile {
+      padding-top: calc(100vh - 100px);
+    }
+
     h1 {
       font-size: 5rem;
+
+      @include tablet {
+        font-size: 4rem;
+      }
+
+      @include mobile {
+        font-size: 2.5rem;
+      }
     }
 
     .progressBar {
@@ -28,13 +46,30 @@
     gap: 1.75rem;
     max-width: 80%;
 
+    @include tablet {
+      flex-direction: column;
+    }
+
     .imageContainer {
       width: 35%;
+
+      @include tablet {
+        width: 55%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @include mobile {
+        width: 85%;
+      }
 
       img {
         width: 100%;
         height: auto;
         border-radius: 0.5rem;
+        @include mobile {
+        }
       }
     }
 
@@ -43,6 +78,20 @@
       display: flex;
       flex-direction: column;
       gap: 1.75rem;
+
+      @include tablet {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        transform: none !important; //removes framer motion animations
+      }
+
+      @include mobile {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        transform: none !important; //removes framer motion animations
+      }
 
       h2 {
         font-size: 2.5rem;

@@ -20,10 +20,23 @@
     justify-content: center;
     margin: 0 20rem;
 
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      max-width: fit-content;
+      text-align: center;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
     .hero__details {
       display: flex;
       flex-direction: column;
       gap: 1.75rem;
+
+      @include mobile {
+        align-items: center;
+      }
 
       .hero__title {
         text-transform: uppercase;
@@ -35,11 +48,23 @@
       .hero__subtitle {
         font-size: 6rem;
         letter-spacing: 0.15rem;
+
+        @include tablet {
+          font-size: 4rem;
+        }
+
+        @include mobile {
+          font-size: 2.5rem;
+        }
       }
 
       .btn__wrapper {
         display: flex;
         gap: 1.75rem;
+
+        @include mobile {
+          justify-content: center;
+        }
 
         .btn--outline {
           padding: 1.25rem;
@@ -72,6 +97,15 @@
 
     .img--avatar {
       min-width: 30rem;
+
+      @include tablet {
+        min-width: 18rem;
+      }
+
+      @include mobile {
+        max-width: 20rem;
+        min-width: 10rem;
+      }
     }
   }
 

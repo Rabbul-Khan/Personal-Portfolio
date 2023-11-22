@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .parallax {
   min-height: 100%;
   position: relative;
@@ -8,6 +10,16 @@
 
   h1 {
     font-size: 5rem;
+
+    @include tablet {
+      font-size: 4rem;
+    }
+
+    @include mobile {
+      font-size: 3rem;
+      text-align: center;
+      padding: 0 1rem;
+    }
   }
 
   .mountains,
@@ -23,11 +35,21 @@
   .mountains {
     background-image: url('./mountains.png');
     z-index: 3;
+
+    @include tablet {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   .planets {
     background-image: url('./planets.png');
     z-index: 2;
+
+    @include tablet {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   .stars {
