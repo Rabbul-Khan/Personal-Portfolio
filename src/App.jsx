@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import Contact from './Components/Contact/Contact';
 import Cursor from './Components/Cursor/Cursor';
 import Hero from './Components/Hero/Hero';
+import Introduction from './Components/Introduction/Introduction';
 import Navbar from './Components/Navbar/Navbar';
 import Parallax from './Components/Parallax/Parallax';
 import Projects from './Components/Projects/Projects';
@@ -45,7 +46,9 @@ function App() {
           <Parallax type="welcome" />
         </section>
 
-        <section id="Introduction">Introduction</section>
+        <section id="Introduction">
+          <Introduction />
+        </section>
 
         <section id="Projects" ref={projectsRef}>
           <Parallax type="projects" />

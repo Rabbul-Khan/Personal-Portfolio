@@ -76,6 +76,7 @@ const Contact = () => {
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
           transition={{ delay: 3, duration: 1 }}
+          viewport={{ once: true }}
         >
           <svg viewBox="0 0 32.666 32.666">
             <motion.path
@@ -107,6 +108,7 @@ const Contact = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
+          viewport={{ once: true }}
         >
           <input type="text" required placeholder="Name" name="name" />
           <input type="email" required placeholder="Email" name="email" />

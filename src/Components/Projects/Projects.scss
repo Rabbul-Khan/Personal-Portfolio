@@ -1,4 +1,4 @@
-@import '../../App.scss';
+@import '/src/App.scss';
 
 .projects {
   position: relative;
@@ -12,7 +12,7 @@
     color: var(--color-orange);
 
     @include tablet {
-      padding-top: calc(100vh - 150px);
+      padding-top: calc(100vh - 125px);
     }
 
     @include mobile {
@@ -51,17 +51,17 @@
     }
 
     .imageContainer {
-      width: 35%;
+      min-width: 500px;
+      max-width: 45%;
 
       @include tablet {
-        width: 55%;
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
       @include mobile {
-        width: 85%;
+        min-width: max(100%, 250px);
       }
 
       img {
@@ -102,21 +102,27 @@
         line-height: 1.5rem;
       }
 
-      button {
-        padding: 1.25rem;
-        border: 1px solid var(--color-orange);
-        border-radius: 0.5rem;
-        background-color: transparent;
-        color: var(--color-orange);
-        font-weight: bold;
-        cursor: pointer;
-        width: 30%;
-        transition: 0.4s;
+      .btnContainer {
+        display: flex;
+        gap: 1.75rem;
 
-        &:hover {
-          color: var(--color-dark-blue);
-          background-color: var(--color-orange);
+        button {
+          min-width: max-content;
+          padding: 1.25rem;
+          border: 1px solid var(--color-orange);
+          border-radius: 0.5rem;
+          background-color: transparent;
+          color: var(--color-orange);
+          font-weight: bold;
+          cursor: pointer;
+          width: 30%;
           transition: 0.4s;
+
+          &:hover {
+            color: var(--color-dark-blue);
+            background-color: var(--color-orange);
+            transition: 0.4s;
+          }
         }
       }
     }

@@ -6,24 +6,31 @@ import { useRef } from 'react';
 const items = [
   {
     id: 1,
-    title: 'React Commerce',
-    img: 'https://images.pexels.com/photos/18452342/pexels-photo-18452342/free-photo-of-man-climbing-on-a-modern-building-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'Quotables',
+    img: '/quotables.JPG',
     description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab voluptatum voluptas officiis cum quis porro totam velit accusantium ',
+      "Quotables is more than just a platform; it's an expression of inspiration. With seamless user authentication, secure JWT implementation, and a sleek MERN stack foundation (MongoDB, Express.js, React, Node.js), users can effortlessly sign up, log in, and share their favorite quotes with the world.",
+    liveUrl: 'https://quotables.onrender.com/',
+    repoUrl: 'https://github.com/Rabbul-Khan/Quotables',
   },
+
   {
     id: 2,
-    title: 'Todo',
-    img: 'https://images.pexels.com/photos/18452342/pexels-photo-18452342/free-photo-of-man-climbing-on-a-modern-building-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'Personal Portfolio',
+    img: '/portfolio.JPG',
     description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab voluptatum voluptas officiis cum quis porro totam velit accusantium ',
+      'Crafted with HTML, CSS, JavaScript, React, and brought to life with Framer Motion, the portfolio encapsulates my passion for clean code and captivating design.',
+    liveUrl: '#',
+    repoUrl: 'https://github.com/Rabbul-Khan/personal-portfolio',
   },
   {
     id: 3,
-    title: 'Tic Tac Toe',
-    img: 'https://images.pexels.com/photos/18452342/pexels-photo-18452342/free-photo-of-man-climbing-on-a-modern-building-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'Todo.io',
+    img: '/todo.JPG',
     description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab voluptatum voluptas officiis cum quis porro totam velit accusantium ',
+      ' Todo.io is a sleek and efficient web app designed to simplify your daily life. Built with HTML, CSS, and JavaScript, Todo.io empowers users to seamlessly manage tasks and projects with ease.',
+    liveUrl: 'https://rabbul-khan.github.io/ToDo.io/',
+    repoUrl: 'https://github.com/Rabbul-Khan/ToDo.io',
   },
 ];
 
@@ -47,7 +54,23 @@ const Single = ({ item }) => {
       <motion.div className="textContainer" style={{ y }}>
         <h2>{item.title}</h2>
         <p>{item.description}</p>
-        <button>See Demo</button>
+        <div className="btnContainer">
+          {item.title === 'Personal portfolio' ? (
+            <button onClick={() => window.scrollTo(0, 0)}>Live link</button>
+          ) : (
+            <button onClick={() => window.open(item.liveUrl, '_blank')}>
+              Live link
+            </button>
+          )}
+          {/* {item.title !== 'Personal portfolio' && (
+            <button onClick={() => window.open(item.liveUrl, '_blank')}>
+              Live link
+            </button>
+          )} */}
+          <button onClick={() => window.open(item.repoUrl, '_blank')}>
+            GitHub Repo
+          </button>
+        </div>
       </motion.div>
     </section>
   );

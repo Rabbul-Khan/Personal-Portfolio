@@ -1,4 +1,4 @@
-@import '../../App.scss';
+@import '/src/App.scss';
 
 .parallax {
   min-height: 100%;
@@ -10,6 +10,9 @@
 
   h1 {
     font-size: 5rem;
+    width: 50%;
+    text-align: center;
+    z-index: 5;
 
     @include tablet {
       font-size: 4rem;
