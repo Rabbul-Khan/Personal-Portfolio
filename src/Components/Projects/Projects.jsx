@@ -3,11 +3,13 @@ import './Projects.scss';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
+import todoImage from './images/todo.jpeg';
+
 const items = [
   {
     id: 1,
     title: 'Quotables',
-    img: '/public/quotables.jpeg',
+    img: './images/quotables.jpeg',
     description:
       "Quotables is more than just a platform; it's an expression of inspiration. With seamless user authentication, secure JWT implementation, and a sleek MERN stack foundation (MongoDB, Express.js, React, Node.js), users can effortlessly sign up, log in, and share their favorite quotes with the world.",
     liveUrl: 'https://quotables.onrender.com/',
@@ -17,7 +19,7 @@ const items = [
   {
     id: 2,
     title: 'Personal Portfolio',
-    img: '/public/portfolio.jpeg',
+    img: '/src/Components/Projects/images/portfolio.jpeg',
     description:
       'Crafted with HTML, CSS, JavaScript, React, and brought to life with Framer Motion, the portfolio encapsulates my passion for clean code and captivating design.',
     liveUrl: '#',
@@ -26,7 +28,7 @@ const items = [
   {
     id: 3,
     title: 'Todo.io',
-    img: '/todo.jpeg',
+    img: todoImage,
     description:
       ' Todo.io is a sleek and efficient web app designed to simplify your daily life. Built with HTML, CSS, and JavaScript, Todo.io empowers users to seamlessly manage tasks and projects with ease.',
     liveUrl: 'https://rabbul-khan.github.io/ToDo.io/',
