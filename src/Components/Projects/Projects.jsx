@@ -3,13 +3,15 @@ import './Projects.scss';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
+import portfolioImage from './images/portfolio.jpeg';
+import quotablesImage from './images/quotables.jpeg';
 import todoImage from './images/todo.jpeg';
 
 const items = [
   {
     id: 1,
     title: 'Quotables',
-    img: './images/quotables.jpeg',
+    img: quotablesImage,
     description:
       "Quotables is more than just a platform; it's an expression of inspiration. With seamless user authentication, secure JWT implementation, and a sleek MERN stack foundation (MongoDB, Express.js, React, Node.js), users can effortlessly sign up, log in, and share their favorite quotes with the world.",
     liveUrl: 'https://quotables.onrender.com/',
@@ -19,7 +21,7 @@ const items = [
   {
     id: 2,
     title: 'Personal Portfolio',
-    img: '/src/Components/Projects/images/portfolio.jpeg',
+    img: portfolioImage,
     description:
       'Crafted with HTML, CSS, JavaScript, React, and brought to life with Framer Motion, the portfolio encapsulates my passion for clean code and captivating design.',
     liveUrl: '#',
